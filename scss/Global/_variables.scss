@@ -1,0 +1,80 @@
+/** Colors **/
+//$primary-h: example;
+//$primary-s: example;
+//$primary-l: example;
+//$primary: hsl($primary-h, $primary-s, $primary-l);
+
+//$secondary-h: example;
+//$secondary-s: example;
+//$secondary-l: example;
+//$secondary: hsl($secondary-h, $secondary-s, $secondary-l);
+
+//$tercas-h: example;
+//$tercas-s: example;
+//$tercas-l: example;
+//$tercas: hsl($tercas-h, $tercas-s, $tercas-l);
+
+//$light-h: example;
+//$light-s: example;
+//$light-l: example;
+//$light: hsl($light-h, $light-s, $light-l);
+
+//$dark-h: example;
+//$dark-s: example;
+//$dark-l: example;
+//$dark: hsl($dark-h, $dark-s, $dark-l);
+
+/** Units of Measure **/
+//-- Global --
+//$p-width: clamp(60ch, 70ch, 75ch);
+//$def-border-sz: 0.5rem;
+//$def-border-style: solid;
+//$def-transition-property: all;
+//$def-transition-duration: 0.5s;
+//$def-transition-effect: ease-in-out;
+
+/** Fonts **/
+//-- type --
+//$primary-font-family: example;
+//$secondary-font-family: example;
+
+//-- sizes --
+//$font-size-min: 14px;  // Minimum font size
+//$font-size-pref: 16px;  // Preferred font size
+//$font-size-max: 20px;  // Maximum font size
+//$body-fs: clamp($font-size-min, 1vw, $font-size-max);
+//$h1-fs: clamp($font-size-min * 1.5, 1.5vw, $font-size-max * 1.2);
+//$h2-fs: clamp($font-size-min * 1.2, 1.2vw, $font-size-max * 1.1);
+//$h3-fs: clamp($font-size-min, 1vw, $font-size-max);
+//$h4-fs: clamp($font-size-min * 0.8, 0.8vw, $font-size-max * 0.9);
+//$h5-fs: clamp($font-size-min * 0.7, 0.7vw, $font-size-max * 0.8);
+//$h6-fs: clamp($font-size-min * 0.6, 0.6vw, $font-size-max * 0.7);
+//$p-fs: clamp($font-size-min * 1.1, 1.1vw, $font-size-max);
+//$p_lead-fs: clamp($font-size-min * 1.25, 1.25vw, $font-size-max * 1.05);
+
+//-- Line-heights --
+//$line-height-base: 1.5; // Base line height multiplier
+//$line-height-body: calc(#{$font-size-pref} * $line-height-base);
+//$line-height-headings: calc($font-size-pref * ($line-height-base * 1.2));
+//$line-height-paragraphs: calc($font-size-pref * $line-height-base);
+
+/** Bootstrap Components **/
+//BS_Spacers
+$spacer: 1rem !default;
+//$spacers: (
+//0: 0,
+//1: $spacer * 0.25,
+//2: $spacer * 0.5,
+//3: $spacer,
+//4: $spacer * 1.5,
+//5: $spacer * 2,
+//6: $spacer * 3,
+//7: $spacer * 6,
+//8: $spacer * 9,
+//)!default;
+
+//--BS_Navbar
+//$navbar-toggler-focus-width: 0.5rem !default;",
+//$navbar-light-color: $primary !default;",
+//$navbar-light-icon-color: $primary !default;
+//$navbar-light-toggler-border-color: $secondary !default;

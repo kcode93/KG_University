@@ -1,0 +1,30 @@
+/** Variables **/
+@import 'Global/variables';
+
+/** Bootstrap Source Files **/
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+/** Global Styles, Mixins and Functions **/
+@import 'Global/mixins';
+@import 'Global/base';
+
+/** Font Awesome Icons **/
+@import '../node_modules/@fortawesome/fontawesome-free/css/all.css';
+
+/** Page Layouts **/
+//@import 'Layouts/header';
+//@import 'Layouts/nav';
+//@import 'Layouts/sections';
+//@import 'Layouts/portfolio';
+//@import 'Layouts/contact-form';
+//@import 'Layouts/footer';
+
+
+/** Modules **/
+//@import 'Modules/typography';
+//@import 'Modules/buttons';
+//@import 'Modules/animations';
+//@import 'Modules/utilities';
+
+/** Media queries **/
+@import 'Layouts/mobile';
