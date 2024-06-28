@@ -25,13 +25,16 @@ function get_cst_scripts() {
   //Script Paths
   $FONT_AWESOME_PATH = '/node_modules/@fortawesome/fontawesome-free/js/all.js';
   $CUSTOM_JS_PATH = '/resources/js/main.css';
+  $SLIDER_PATH = 'resources/js/index.js';
   
   // Define the path to your custom JavaScript file
   $font_awesome = get_template_directory_uri() . $FONT_AWESOME_PATH;
+  $sliderJS =  get_theme_file_uri($SLIDER_PATH);//preferred option
   $script_uri = get_template_directory_uri() . $CUSTOM_JS_PATH;
   
   // Enqueue the custom JavaScript file
   wp_enqueue_script( 'font-awesome', $font_awesome, array(), '1.0.0', 'all' );
+  wp_enqueue_script( 'slider-script', $sliderJS, array(), '1.0.0', 'all' );
   wp_enqueue_script( 'custom-script', $script_uri, array(), '1.0.0', 'all' );
 }
 
