@@ -8,16 +8,17 @@ function get_cst_styles(){
     $GOOGLE_FONTS_CDN = "https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap";
 
     // Define the path to custom CSS file
-    $stylesheet_uri = get_template_directory_uri() . $CUSTOM_CSS_PATH;
-    $googleFonts_C1 =  get_template_directory_uri() . $GOOGLE_FONTS_FIRST_PRECONNECT;
-    $googleFonts_C2 =  get_template_directory_uri() . $GOOGLE_FONTS_SECOND_PRECONNECT;
-    $googlFonts = get_template_directory_uri() . $GOOGLE_FONTS_CDN;
+    $stylesheet_uri = get_theme_file_uri($CUSTOM_CSS_PATH);
+    $googleFonts_C1 = get_theme_file_uri($GOOGLE_FONTS_FIRST_PRECONNECT);
+    $googleFonts_C2 = get_theme_file_uri($GOOGLE_FONTS_SECOND_PRECONNECT);
+    $googlFonts = get_theme_file_uri($GOOGLE_FONTS_CDN);
 
     // Enqueue the custom CSS file
-    wp_enqueue_style('google-fonts-c1', $googleFonts_C1, array(), '1.0.0', 'all' );
-    wp_enqueue_style('google-fonts-c2', $googleFonts_C2, array(), '1.0.0', 'all' );
-    wp_enqueue_style('google-fonts', $googlFonts, array(), '1.0.0', 'all' );
-    wp_enqueue_style('custom-style', $stylesheet_uri, array(), '1.0.0', 'all' );
+    //customName,pathToStyle,dependencies,version,loadb4BodyClosingTag
+    wp_enqueue_style('google-fonts-c1', $googleFonts_C1, array(), '1.0', 'all');
+    wp_enqueue_style('google-fonts-c2', $googleFonts_C2, array(), '1.0', 'all');
+    wp_enqueue_style('google-fonts', $googlFonts, array(), '1.0', 'all' );
+    wp_enqueue_style('custom-style', $stylesheet_uri, array(), '1.0', 'all');
 }
 
 //Loads Custom JavaScript
@@ -28,14 +29,15 @@ function get_cst_scripts() {
   $SLIDER_PATH = 'resources/js/index.js';
   
   // Define the path to your custom JavaScript file
-  $font_awesome = get_template_directory_uri() . $FONT_AWESOME_PATH;
-  $sliderJS =  get_theme_file_uri($SLIDER_PATH);//preferred option
-  $script_uri = get_template_directory_uri() . $CUSTOM_JS_PATH;
+  $font_awesome = get_theme_file_uri($FONT_AWESOME_PATH);
+  $sliderJS =  get_theme_file_uri($SLIDER_PATH);
+  $script_uri = get_theme_file_uri($CUSTOM_JS_PATH);
   
   // Enqueue the custom JavaScript file
-  wp_enqueue_script( 'font-awesome', $font_awesome, array(), '1.0.0', 'all' );
-  wp_enqueue_script( 'slider-script', $sliderJS, array(), '1.0.0', 'all' );
-  wp_enqueue_script( 'custom-script', $script_uri, array(), '1.0.0', 'all' );
+  //customName,pathToScript,dependencies,version,loadb4BodyClosingTag
+  wp_enqueue_script( 'font-awesome', $font_awesome, array(), '1.0', true);
+  wp_enqueue_script( 'slider-script', $sliderJS, array(), '1.0', true);
+  wp_enqueue_script( 'custom-script', $script_uri, array(), '1.0', true);
 }
 
 //pulls header.php from custom path
