@@ -40,6 +40,30 @@ function get_cst_scripts() {
   wp_enqueue_script( 'custom-script', $script_uri, array(), '1.0', true);
 }
 
+//Loads Custom Page Template 
+function get_cst_page_template($template) {
+  $CST_PAGE_TEMP_PATH = '/templates/page.php';
+  if (is_page()) {
+    $custom_page_template = locate_template($CST_PAGE_TEMP_PATH);
+    if ($custom_page_template) {
+      return $custom_page_template;
+    }
+  }
+  return $template;
+}
+
+//Loads Custom Post Template 
+function get_cst_post_template($template) {
+  $CST_SINGLE_TEMP_PATH = '/templates/single.php';
+  if (is_singular()) {
+    $custom_single_template = locate_template($CST_SINGLE_TEMP_PATH);
+    if ($custom_single_template) {
+      return $custom_single_template;
+    }
+  }
+  return $template;
+}
+
 //pulls header.php from custom path
 function get_cst_header() {
   //Path
@@ -62,5 +86,7 @@ function get_cst_footer() {
   }
 }
 
+//Loads All Styles & Scripts for Website
 add_action('wp_enqueue_scripts', 'get_cst_styles');
 add_action('wp_enqueue_scripts', 'get_cst_scripts');
+add_filter('template_include', 'get_cst_page_template');

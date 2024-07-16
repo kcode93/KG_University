@@ -1,4 +1,6 @@
+<!-- invokes the header -->
 <?php get_cst_header(); ?>
+
 <main>
   <div class="page-banner">
       <div class="page-banner__bg-image" style="background-image: url(<?php echo get_theme_file_uri('./resources/img/images/library-hero.jpg') ?>);"></div>
@@ -104,4 +106,6 @@
       </div>
     </div>
 </main>
+
+<!--invokes the footer -->
 <?php get_cst_footer(); ?>
