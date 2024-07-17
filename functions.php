@@ -55,7 +55,7 @@ function get_cst_page_template($template) {
 //Loads Custom Post Template 
 function get_cst_single_template($template) {
   $CST_SINGLE_TEMP_PATH = '/templates/single.php';
-  if (is_singular()) {
+  if (is_single()) {
     $custom_single_template = locate_template($CST_SINGLE_TEMP_PATH);
     if ($custom_single_template) {
       return $custom_single_template;
@@ -97,7 +97,7 @@ add_action('wp_enqueue_scripts', 'get_cst_scripts');
 
 //Loads Custom Page(s) & Post(s) paths
 add_filter('template_include', 'get_cst_page_template');
-//add_filter('template_include', 'get_cst_single_template');
+add_filter('template_include', 'get_cst_single_template');
 
 //Loads Custom Theme Support
 add_action('after_setup_theme', 'theme_cst_support');
