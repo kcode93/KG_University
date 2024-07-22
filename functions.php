@@ -66,7 +66,17 @@ function get_cst_single_template($template) {
 
 //Loads Theme Custom Setups
 function theme_cst_support(){
+  //adds dynami page title
   add_theme_support('title-tag');
+
+  //maps navigation menu location
+  register_nav_menu('headerMainMenu', 'Primary Theme Navigation Menu');
+
+  //maps footer menu location
+  register_nav_menu('primaryFooterMenu', 'Primary Footer Menu');
+
+  //maps footer menu location
+  register_nav_menu('secondaryFooterMenu', 'Secondary Footer Menu');
 }
 
 //pulls header.php from custom path
