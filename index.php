@@ -26,10 +26,13 @@
       <p><a class="btn btn--blue" href="<?php the_permalink() ?>">Read More!</a></p>
     </div>
   </div>
+  <!--Closes the have_posts Loop -->
+  <?php } 
+    echo paginate_links();  
+  ?>
 </div>
 
-<!--Closes the have_posts Loop -->
-<?php } ?>
+
 
 <!--invokes the footer -->
 <?php get_cst_footer(); ?>
