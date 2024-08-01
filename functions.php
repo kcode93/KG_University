@@ -91,15 +91,15 @@ function get_cst_header() {
 }
 
 // //pulls footer.php from custom path
-// function get_cst_footer() {
-//    //Path
-//   $FOOTER_PATH = '/includes/footer.php';
+function get_cst_footer() {
+   //Path
+  $FOOTER_PATH = '/includes/footer.php';
 
-//   $template_path = get_template_directory() . $FOOTER_PATH; 
-//   if ( file_exists( $template_path ) ) {
-//     include( $template_path );
-//   }
-// }
+  $template_path = get_template_directory() . $FOOTER_PATH; 
+  if ( file_exists( $template_path ) ) {
+    include( $template_path );
+  }
+}
 
 
 
