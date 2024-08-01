@@ -90,16 +90,18 @@ function get_cst_header() {
   }
 }
 
-//pulls footer.php from custom path
-function get_cst_footer() {
-   //Path
-  $FOOTER_PATH = '/includes/footer.php';
+// //pulls footer.php from custom path
+// function get_cst_footer() {
+//    //Path
+//   $FOOTER_PATH = '/includes/footer.php';
 
-  $template_path = get_template_directory() . $FOOTER_PATH; 
-  if ( file_exists( $template_path ) ) {
-    include( $template_path );
-  }
-}
+//   $template_path = get_template_directory() . $FOOTER_PATH; 
+//   if ( file_exists( $template_path ) ) {
+//     include( $template_path );
+//   }
+// }
+
+
 
 //Loads All Styles & Scripts for Website
 add_action('wp_enqueue_scripts', 'get_cst_styles');
@@ -111,3 +113,6 @@ add_action('wp_enqueue_scripts', 'get_cst_scripts');
 
 //Loads Custom Theme Support
 add_action('after_setup_theme', 'theme_cst_support');
+
+//Loads Custom Post Types
+//add_action('init', 'create_cst_post_type');
