@@ -1,6 +1,7 @@
 <!-- invokes the header -->
 <?php get_cst_header(); ?>
 
+<!--Powers All Blog Posts -->
 <div class="page-banner">
   <div class="page-banner__bg-image" style="background-image: url(<?php echo get_theme_file_uri('./resources/img/images/bus.jpg') ?>);"></div>
   <div class="page-banner__content container container--narrow">
